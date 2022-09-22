@@ -43,6 +43,15 @@ app.get('/webhook', (req, res) =>{
     }
 })
 
-app.listen(3000, () =>{
+const PORT = process.env.PORT || 3000
+
+//console.log({PORT})
+
+app.listen(PORT, function () {
+    console.log("Servidor escuchando en el puerto", PORT)
+})
+
+
+/*app.listen(3000, () =>{
     console.log('Servidor iniciado...');
-});
+});*/
